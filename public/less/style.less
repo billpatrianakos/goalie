@@ -41,6 +41,17 @@
 	border-radius: @arguments;
 }
 
+.border-top-radius (@radius: 6px) {
+	-moz-border-top-right-radius: @arguments;
+	-o-border-top-right-radius: @arguments;
+	-webkit-border-top-right-radius: @arguments;
+	border-top-right-radius: @arguments;
+	-moz-border-top-left-radius: @arguments;
+	-o-border-top-left-radius: @arguments;
+	-webkit-border-top-left-radius: @arguments;
+	border-top-left-radius: @arguments;
+}
+
 .box-shadow (@x: 0, @y: 0, @blur: 5px, @color: #fff) {
   -o-box-shadow: @arguments;
   -moz-box-shadow: @arguments;
@@ -63,6 +74,19 @@
 }
 
 /* BACKGROUND GRADIENT MIXINS */
+
+.blue-gradient {
+	background: #5f9fe6; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVmOWZlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYTdhYzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, #5f9fe6 0%, #3a7ac1 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5f9fe6), color-stop(100%,#3a7ac1)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #5f9fe6 0%,#3a7ac1 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #5f9fe6 0%,#3a7ac1 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #5f9fe6 0%,#3a7ac1 100%); /* IE10+ */
+background: linear-gradient(top, #5f9fe6 0%,#3a7ac1 100%); /* W3C */
+filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f9fe6', endColorstr='#3a7ac1',GradientType=0 )"; /* IE6-8 */
+}
 
 .link-btn-bg {
 
@@ -100,7 +124,11 @@ textarea {
 }
 
 input[type=text], input[type=email], input[type=password] {
-  
+	.border-radius(6px);
+	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
+	border: 1px solid @blue;
+	padding: 5px;
+	margin: auto auto 5px auto;
 }
 
 input[type=submit] {
@@ -111,6 +139,43 @@ input[type=submit] {
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
 \**************************************/
+
+body {
+	background: @bggray;
+}
+
+.row {
+	background: @white;
+}
+
+#header {
+	.blue-gradient;
+	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
+	border: 1px solid @dblue;
+	.border-top-radius(6px);
+	.box-shadow(0, 0, 2px, @black);
+	& h1 {
+		color: @white;
+		.text-shadow(0, -1px, 1px, @dblue);
+		font-family: Pacifico;
+		font-size: 20px;
+	}
+}
+
+#signup {
+	width: 400px;
+	background: @optionswhite;
+	border: 1px solid @bggray;
+	.box-shadow(0, 0, 3px, @optionswhite);
+	margin: 20px auto 20px auto;
+	.border-radius(3px);
+}
+
+footer .row {
+	background: @optionswhite;
+	.inset-shadow(inset, 0, 1px, 0, @white);
+	border-top: 1px solid @optionswhite;
+}
 
 
 
