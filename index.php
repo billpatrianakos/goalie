@@ -31,17 +31,22 @@
 				<h1><i class="icon-check icon-large"></i> Goalie</h1>
 			</article>
 			<nav class="three last">
-
+				<ul class="tabs right">  
+				    <li class="active"><a href="#">Sign up</a></li>
+				    <li><a href="#">Log in</a></li>
+				</ul>
 			</nav>
 		</section>
 	</header>
 	<section id="main-container" class="container">
 		<section class="row">
 			<article class="twelve">
-				<div id="signup" class="centered-text">
+				<div class="clear"></div>
+				<div id="signup" class="centered-text tabs_content">
+					<div>
 					<h2>Sign up</h2>
 					<fieldset>
-						<form>
+						<form method="post" action="app/signup.php">
 							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
 							<br />
 							<i class="icon-key icon-large"></i> <input type="password" name="password" value="" placeholder="Password" />
@@ -49,6 +54,19 @@
 							<input type="submit" name="signup" value="Create account" />
 						</form>
 					</fieldset>
+					</div>
+					<div>
+					<h2>Log in</h2>
+					<fieldset>
+						<form method="post" action="app/login.php">
+							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
+							<br />
+							<i class="icon-key icon-large"></i> <input type="password" name="password" value="" placeholder="Password" />
+							<br />
+							<input type="submit" name="signup" value="Log in" />
+						</form>
+					</fieldset>
+					</div>
 				</div>
 			</article>
 		</section>
@@ -70,6 +88,11 @@
 	<script>window.jQuery || document.write('<script src="public/js/libs/jquery1.6.4.min.js">\x3C/script>')</script>
 	<script src="public/js/plugins.js"></script>
 	<script src="public/js/scripts.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("ul.tabs").jTabs({content: ".tabs_content"});
+		});
+	</script>
 
 	<script type="text/javascript">
 	var pkBaseURL = (("https:" == document.location.protocol) ? "https://chooseclever.com/stats/" : "http://chooseclever.com/stats/");
