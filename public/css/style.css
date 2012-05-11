@@ -1195,6 +1195,9 @@ body {
 .row {
   background: #ffffff;
 }
+header {
+  margin-top: 20px;
+}
 #header {
   background: #5f9fe6;
   /* Old browsers */
