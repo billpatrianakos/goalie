@@ -14,6 +14,9 @@ include "../app/fetch_lists.php";
 	<link rel="author" href="../humans.txt" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="apple-touch-startup-image" href="/startup.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
 	<link rel="stylesheet" href="../public/css/style.css?v=2" />
 	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' type='text/css'>
