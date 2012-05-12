@@ -52,7 +52,6 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 				<div id="signup" class="centered-text tabs_content">
 					<div>
 					<h2>Sign up</h2>
-					<h3 class="<?php echo "$errorclass"; ?>">Error: Username exists</h3>
 					<fieldset>
 						<form method="post" action="app/signup.php">
 							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
