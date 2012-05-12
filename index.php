@@ -1,10 +1,10 @@
 <?php
 
-if (isset($_GET['err'])) {
-	$errorclass = "hidden";
+if ($_GET['err'] == "") {
+	$errorclass = "blank";
 }
 else {
-	$errorclass = "";
+	$errorclass = "hidden";
 }
 
 if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
