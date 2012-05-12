@@ -3,6 +3,7 @@
 // CONNECTION VARIABLES
 $host="localhost";
 $dbuser="test";
-$password="password";
+$dbpassword="password";
 $database="goalie";
-$connect=mysqli_connect($host,$dbuser,$password,$database) or die ("Could not connect to database.");
+$connect=mysqli_connect($host,$dbuser,$dbpassword,$database) or die ("Could not connect to database.");
+?>

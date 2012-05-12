@@ -1,7 +1,5 @@
 <?php
-require_once "../app/auth.php";
-//include "../config/database.php";
-include "../app/fetch_lists.php";
+include "../app/auth.php";
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -9,7 +7,7 @@ include "../app/fetch_lists.php";
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	 
-	<title><?php echo "$username's Goals"; ?></title>
+	<title>Add a task</title>
 	<meta name="description" content="Much more than just a todo list dressed up in an understated, unassuming package." />
 	<meta name="author" content="Bill Patrianakos" />
 	<link rel="author" href="../humans.txt" />
@@ -30,52 +28,39 @@ include "../app/fetch_lists.php";
 	<header class="container">
 		<section class="row gradient" id="header">
 			<nav class="three">
-
+				<a class="bar-button left" href="../do_it/">Back</a>
 			</nav>
 			<article class="six centered-text">
 				<h1><i class="icon-check icon-large"></i> Goalie</h1>
 			</article>
 			<nav class="three last">
-				<a class="bar-button right" href="../new"><i class="icon-plus icon-large"></i> New Task</a>
+				
 			</nav>
 		</section>
 	</header>
 	<section id="main-container" class="container">
 		<section class="row">
-			<article id="cat-sidebar" class="three">
-				<ul id="categories" class="tabs">  
-				    <li class="active catlist"><a href="#"><i class="icon-inbox icon-large"></i> Inbox</a></li>
-				    <li><a href="#"><i class="icon-star icon-large"></i> Today</a></li>
-				    <li><a href="#"><i class="icon-arrow-right icon-large"></i> Next</a></li>
-				    <li><a href="#"><i class="icon-calendar icon-large"></i> Someday</a></li>
-				</ul>
-			</article>
-			<article class="nine last">
-				<div class="tabs_content">
-				    <div>
-				    	<h2>Inbox</h2>
-				    	<ul class="list">
-				    		<?php fetch_list('inbox'); ?>
-				    	</ul>
-				    </div>
-				    <div>
-				    	<h2>Today</h2>
-				    	<ul class="list">
-				    		<?php fetch_list('today'); ?>
-				    	</ul>
-				    </div>
-				    <div>
-				    	<h2>Next</h2>
-				    	<ul class="list">
-				    		<?php fetch_list('next'); ?>
-				    	</ul>
-				    </div>
-				    <div>
-				    	<h2>Someday</h2>
-				    	<ul class="list">
-				    		<?php fetch_list('someday'); ?>
-				    	</ul>
-				    </div>
+			<article class="twelve">
+				<div id="signup" class="centered-text tabs_content">
+					<div>
+					<h2>Add a task</h2>
+					<fieldset>
+						<form method="post" action="../app/new.php">
+							<input type="text" name="name" value="" placeholder="Short name" />
+							<br />
+							<textarea value="" name="description" placeholder="Task description"></textarea>
+							<br />
+							<select name="category">
+								<option value="inbox">Inbox</option>
+								<option value="today">Today</option>
+								<option value="next">Next</option>
+								<option value="someday">Someday</option>
+							</select>
+							<br />
+							<input type="submit" value="Add task" />
+						</form>
+					</fieldset>
+					</div>
 				</div>
 			</article>
 		</section>
@@ -104,14 +89,14 @@ include "../app/fetch_lists.php";
 	</script>
 
 	<script type="text/javascript">
-		var pkBaseURL = (("https:" == document.location.protocol) ? "https://chooseclever.com/stats/" : "http://chooseclever.com/stats/");
-		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-		</script><script type="text/javascript">
-		try {
-		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 7);
-		piwikTracker.trackPageView();
-		piwikTracker.enableLinkTracking();
-		} catch( err ) {}
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://chooseclever.com/stats/" : "http://chooseclever.com/stats/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 7);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
 	</script><noscript><p><img src="http://chooseclever.com/stats/piwik.php?idsite=7" style="border:0" alt="" /></p></noscript>
 
 	<!--[if lt IE 7 ]>

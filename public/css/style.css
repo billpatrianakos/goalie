@@ -367,7 +367,7 @@ h5,
 h6 {
   position: relative;
   font-family: 'Pacifico', Arimo, Helvetica, Tahoma, sans-serif;
-  color: #000000 0;
+  color: #000000;
   -o-text-shadow: 0 -1px 1px #ffffff;
   -moz-text-shadow: 0 -1px 1px #ffffff;
   -webkit-text-shadow: 0 -1px 1px #ffffff;
@@ -408,7 +408,8 @@ address {
 small {
   font-size: 12px;
 }
-li {
+li,
+label {
   font-family: Arimo, Helvetica, Arial, Tahoma, sans-serif;
 }
 strong {
@@ -1070,18 +1071,18 @@ li[class*=" icon-"].icon-large:before {
 .link-button,
 .link-button:visited {
   padding: 6px 10px;
-  color: #000000 0;
+  color: #000000;
   -o-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
   /* Gives your button a "shiny"/"candy" effect */
 
-  -o-text-shadow: 0 -1px 1px #000000 0;
-  -moz-text-shadow: 0 -1px 1px #000000 0;
-  -webkit-text-shadow: 0 -1px 1px #000000 0;
-  text-shadow: 0 -1px 1px #000000 0;
-  border: 1px solid #000000 0;
+  -o-text-shadow: 0 -1px 1px #000000;
+  -moz-text-shadow: 0 -1px 1px #000000;
+  -webkit-text-shadow: 0 -1px 1px #000000;
+  text-shadow: 0 -1px 1px #000000;
+  border: 1px solid #000000;
   /* Color should be set to the darkest shade of your button gradient for best effect */
 
   white-space: nowrap;
@@ -1094,9 +1095,22 @@ li[class*=" icon-"].icon-large:before {
   box-shadow: inset 0 1px 0 #ffffff;
   /* Same rules apply as above for appearance of hovered buttons */
 
-  border: 1px solid #000000 0;
+  border: 1px solid #000000;
 }
 /*:::: FORMs ::::*/
+textarea {
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -o-box-shadow: inset 0 1px 0 #75acea;
+  -moz-box-shadow: inset 0 1px 0 #75acea;
+  -webkit-box-shadow: inset 0 1px 0 #75acea;
+  box-shadow: inset 0 1px 0 #75acea;
+  border: 1px solid #3a7ac1;
+  padding: 5px;
+  margin: auto auto 5px auto;
+}
 input[type=text],
 input[type=email],
 input[type=password] {
@@ -1186,6 +1200,9 @@ input[type=submit]:active {
   /* IE6-8 */
 
 }
+select {
+  margin-bottom: 10px;
+}
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
 \**************************************/
@@ -1239,10 +1256,10 @@ header {
   -o-border-top-left-radius: 6px;
   -webkit-border-top-left-radius: 6px;
   border-top-left-radius: 6px;
-  -o-box-shadow: 0 0 2px #000000 0;
-  -moz-box-shadow: 0 0 2px #000000 0;
-  -webkit-box-shadow: 0 0 2px #000000 0;
-  box-shadow: 0 0 2px #000000 0;
+  -o-box-shadow: 0 0 2px #000000;
+  -moz-box-shadow: 0 0 2px #000000;
+  -webkit-box-shadow: 0 0 2px #000000;
+  box-shadow: 0 0 2px #000000;
 }
 #header h1 {
   color: #ffffff;
@@ -1252,6 +1269,9 @@ header {
   text-shadow: 0 -1px 1px #508ad2;
   font-family: Pacifico;
   font-size: 20px;
+}
+.bar-button {
+  margin-top: 10px;
 }
 #signup {
   max-width: 400px;
@@ -1275,12 +1295,54 @@ footer .row {
   box-shadow: inset 0 1px 0 #ffffff;
   border-top: 1px solid #f1f3f5;
 }
+/*:::: Todo Page ::::*/
+#cat-sidebar {
+  background: #f1f3f5;
+  border-right: 1px solid #e7edf3;
+}
+#categories {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+#categories li {
+  padding: 3px 5px;
+}
+#categories li a {
+  color: #555555;
+  -o-text-shadow: 0 1px 0 #ffffff;
+  -moz-text-shadow: 0 1px 0 #ffffff;
+  -webkit-text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#categories li.active {
+  background: #e7edf3 !important;
+  border-bottom: 1px solid #ffffff !important;
+  border-top: 1px solid #ffffff;
+}
+#categories li.active a {
+  color: #000000;
+  -o-text-shadow: 0 1px 0 #ffffff;
+  -moz-text-shadow: 0 1px 0 #ffffff;
+  -webkit-text-shadow: 0 1px 0 #ffffff;
+  text-shadow: 0 1px 0 #ffffff;
+}
+ul li.catlist {
+  color: #333333;
+  background: #f1f3f5;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+}
 /*:::: SPECIAL STYLES ::::*/
 nav li.active {
   display: none;
 }
 nav li a,
-nav li a:visited {
+nav li a:visited,
+nav a,
+nav a:visited {
   color: #ffffff;
   -o-text-shadow: 0 -1px 1px #508ad2;
   -moz-text-shadow: 0 -1px 1px #508ad2;
@@ -1324,7 +1386,8 @@ nav li a:visited {
   box-shadow: inset 0 1px 0 #75acea;
   padding: 6px 12px;
 }
-nav li a:hover {
+nav li a:hover,
+nav a:hover {
   color: #f1f3f5;
 }
 /*:::: HELPER CLASSES ::::*/

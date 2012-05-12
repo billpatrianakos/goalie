@@ -24,7 +24,15 @@ else {
 
 	if ($count == 1) {
 		$user = mysqli_fetch_assoc($result);
+		$uid 		= $user['id'];
 		$username 	= $user['user'];
+		$password 	= $user['password'];
+
+		# Set cookies
+		setcookie('goalie', 'set', time()+604800, '/');
+		setcookie('user', $username, time()+604800, '/');
+		setcookie('password', $password, time()+604800, '/');
+		setcookie('uid', $uid, time()+604800, '/');
 		header("Location: ../do_it/");
 	}
 	else {

@@ -1,3 +1,17 @@
+<?php
+
+if (isset($_GET['err'])) {
+	$errorclass = "hidden";
+}
+else {
+	$errorclass = "";
+}
+
+if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
+	header("Location: do_it/index.php");
+}
+
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -45,6 +59,7 @@
 				<div id="signup" class="centered-text tabs_content">
 					<div>
 					<h2>Sign up</h2>
+					<h3 class="<?php echo "$errorclass"; ?>">Error: Username exists</h3>
 					<fieldset>
 						<form method="post" action="app/signup.php">
 							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
@@ -74,7 +89,7 @@
 	<footer class="container">
 		<section class="row">
 			<article class="twelve">
-				<p>
+				<p class="copyright">
 					<small>
 						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a> | Check out <a href="http://chooseclever.com">my company</a> too.
 					</small>

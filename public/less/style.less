@@ -133,7 +133,11 @@ filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f9fe6', e
 /*:::: FORMs ::::*/
 
 textarea {
-  
+  .border-radius(6px);
+	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
+	border: 1px solid @blue;
+	padding: 5px;
+	margin: auto auto 5px auto;
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -157,6 +161,10 @@ input[type=submit] {
 
 input[type=submit]:active {
 	.blue-gradient-backwards;
+}
+
+select {
+	margin-bottom: 10px;
 }
 
 
@@ -190,6 +198,10 @@ header {
 	}
 }
 
+.bar-button {
+	margin-top: 10px;
+}
+
 #signup {
 	max-width: 400px;
 	background: @optionswhite;
@@ -205,8 +217,48 @@ footer .row {
 	border-top: 1px solid @optionswhite;
 }
 
+/*:::: Todo Page ::::*/
 
+#cat-sidebar {
+	background: @optionswhite;
+	border-right: 1px solid @activeblue;
+}
 
+#categories {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#categories li {
+	padding: 3px 5px;
+}
+
+#categories li a {
+	color: @inactiveblack;
+	.text-shadow(0, 1px, 0, @white);
+}
+
+#categories li.active {
+	background: @activeblue !important;
+	border-bottom: 1px solid @white !important;
+	border-top: 1px solid @white;
+}
+
+#categories li.active a {
+	color: @black;
+	.text-shadow(0, 1px, 0, @white);
+}
+
+ul li.catlist {
+	color: @activeblack;
+	background: @optionswhite;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0;
+}
 
 
 
@@ -227,7 +279,7 @@ nav li.active {
 	display: none;
 }
 
-nav li a, nav li a:visited {
+nav li a, nav li a:visited, nav a, nav a:visited {
 	color: @white;
 	.text-shadow(0, -1px, 1px, @dblue);
 	.border-radius(6px);
@@ -237,7 +289,7 @@ nav li a, nav li a:visited {
 	padding: 6px 12px;
 }
 
-nav li a:hover {
+nav li a:hover, nav a:hover {
 	color: @optionswhite;
 }
 
