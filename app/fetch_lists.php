@@ -17,7 +17,12 @@ function fetch_list($which_list) {
 			$name			= $todo['name'];
 			$description 	= $todo['description'];
 
-			echo "<li>$name</li>";
+			echo "
+			<li>
+				<a class='complete' href='../app/complete.php?task=$id'><i class='icon-stop icon-large'></i></a> 
+				<a href='../task.php?task=$id'>$name <span class='right'><i class='icon-chevron-right icon-large'></i></span></a>
+			</li>
+			";
 		}
 	}
 	else {

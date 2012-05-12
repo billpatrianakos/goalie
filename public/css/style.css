@@ -80,8 +80,8 @@ dfn {
   font-style: italic;
 }
 mark {
-  background: #ffff00;
-  color: #000000;
+  background: #f2e700;
+  color: #555555;
 }
 pre,
 code,
@@ -1333,7 +1333,35 @@ ul li.catlist {
 }
 .list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  border-top: 1px solid #f1f3f5;
+  border-bottom: 1px solid #f1f3f5;
+  padding: 5px 0px 5px 0px;
+}
+.list li:hover {
+  background: #e7edf3;
+}
+.list a,
+.list a:visited {
+  color: #555555;
+  -o-text-shadow: 0 1px 1px #ffffff;
+  -moz-text-shadow: 0 1px 1px #ffffff;
+  -webkit-text-shadow: 0 1px 1px #ffffff;
+  text-shadow: 0 1px 1px #ffffff;
+}
+.list li:hover a {
+  color: #333333;
+}
+a.complete,
+a.complete:visited {
+  color: #f1f3f5;
+  -o-text-shadow: 0 -1px 1px #555555;
+  -moz-text-shadow: 0 -1px 1px #555555;
+  -webkit-text-shadow: 0 -1px 1px #555555;
+  text-shadow: 0 -1px 1px #555555;
 }
 /*:::: SPECIAL STYLES ::::*/
 nav li.active {

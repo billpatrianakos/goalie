@@ -1,6 +1,5 @@
 <?php
 require_once "../app/auth.php";
-//include "../config/database.php";
 include "../app/fetch_lists.php";
 ?>
 <!DOCTYPE html>
@@ -54,6 +53,7 @@ include "../app/fetch_lists.php";
 				<div class="tabs_content">
 				    <div>
 				    	<h2>Inbox</h2>
+
 				    	<ul class="list">
 				    		<?php fetch_list('inbox'); ?>
 				    	</ul>

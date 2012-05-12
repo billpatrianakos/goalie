@@ -257,7 +257,32 @@ ul li.catlist {
 
 .list {
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.list li {
+	border-top: 1px solid @optionswhite;
+	border-bottom: 1px solid @optionswhite;
+	padding: 5px 0px 5px 0px;
+}
+
+.list li:hover {
+	background: @activeblue;
+}
+
+.list a, .list a:visited {
+	color: @inactiveblack;
+	.text-shadow(0, 1px, 1px, @white);
+}
+
+.list li:hover a {
+	color: @activeblack;
+}
+
+a.complete, a.complete:visited {
+	color: @optionswhite;
+	.text-shadow(0, -1px, 1px, @inactiveblack);
 }
 
 
