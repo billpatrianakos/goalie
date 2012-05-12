@@ -1,12 +1,5 @@
 <?php
 
-if ($_GET['err'] == "") {
-	$errorclass = "blank";
-}
-else {
-	$errorclass = "hidden";
-}
-
 if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 	header("Location: do_it/index.php");
 }
