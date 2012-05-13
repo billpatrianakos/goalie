@@ -17,10 +17,14 @@ function fetch_list($which_list) {
 			$name			= $todo['name'];
 			$description 	= $todo['description'];
 
+			$formid 		= str_replace(" ", "", $name);
+
 			echo "
 			<li>
-				<a class='complete' href='../app/complete.php?task=$id'><i class='icon-stop icon-large'></i></a> 
-				<a href='../task.php?task=$id'>$name <span class='right'><i class='icon-chevron-right icon-large'></i></span></a>
+				<form method='post' name='$formid' action='../app/complete.php' onclick=\"document.forms['$formid'].submit()\">
+					<input type='checkbox' name='task' value='$id' /> 
+					<a href='../task/index.php?task=$id'>$name <span class='right'><i class='icon-chevron-right icon-large'></i></span></a>
+				</form>
 			</li>
 			";
 		}

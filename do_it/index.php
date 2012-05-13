@@ -42,8 +42,8 @@ include "../app/fetch_lists.php";
 			</nav>
 		</section>
 	</header>
-	<section id="main-container" class="container">
-		<section class="row">
+	<section class="container">
+		<section id="main-container" class="row">
 			<article id="cat-sidebar" class="three">
 				<ul id="categories" class="tabs">  
 				    <li class="active catlist"><a href="#"><i class="icon-inbox icon-large"></i> Inbox</a></li>
@@ -52,7 +52,7 @@ include "../app/fetch_lists.php";
 				    <li><a href="#"><i class="icon-calendar icon-large"></i> Someday</a></li>
 				</ul>
 			</article>
-			<article class="nine last">
+			<article id="list-content" class="nine last">
 				<div class="tabs_content">
 				    <div>
 				    	<h2>Inbox</h2>
@@ -101,6 +101,7 @@ include "../app/fetch_lists.php";
 	<script src="../public/js/plugins.js"></script>
 	<script src="../public/js/scripts.js"></script>
 	<script type="text/javascript">
+		/* jTABS */
 		$(document).ready(function(){
 			$("ul.tabs").jTabs({content: ".tabs_content"});
 		});
