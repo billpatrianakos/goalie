@@ -31,14 +31,13 @@ include "../app/fetch_lists.php";
 <div id="wrapper">
 	<header class="container">
 		<section class="row gradient" id="header">
-			<nav class="three">
+			<nav class="twelve">
 
-			</nav>
-			<article class="six centered-text">
-				<h1><i class="icon-check icon-large"></i> Goalie</h1>
-			</article>
-			<nav class="three last">
-				<a class="bar-button right" href="../new"><i class="icon-plus icon-large"></i> New Task</a>
+				<h1 class="centered-text">
+					<a class="bar-button left" href="../app/logout.php"><i class="icon-signout icon-large"></i> Log out</a>
+					<i class="icon-check icon-large"></i> Goalie
+					<a class="bar-button right" href="../new"><i class="icon-plus icon-large"></i> New Task</a>
+				</h1>
 			</nav>
 		</section>
 	</header>
@@ -87,8 +86,12 @@ include "../app/fetch_lists.php";
 		<section class="row">
 			<article class="twelve">
 				<p class="copyright">
+					<a href="http://facebook.com/cleverwebdesign"><i class="icon-facebook-sign icon-large"></i></a> 
+					<a href="http://twitter.com/chooseclever"><i class="icon-twitter-sign icon-large"></i></a> 
+					<a href="http://github.com/billpatrianakos"><i class="icon-github-sign icon-large"></i></a>
+					<br />
 					<small>
-						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a> | Check out <a href="http://chooseclever.com">my company</a> too.
+						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a>
 					</small>
 				</p>
 			</article>

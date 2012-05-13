@@ -1,5 +1,27 @@
 <?php
+
 include "../app/auth.php";
+include "../config/database.php";
+//include "../app/task.php";
+$task = $_GET['task'];
+$query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
+	$result = mysqli_query($connect, $query) or die ("Query failed");
+	$count = mysqli_num_rows($result);
+
+	if ($count == 1) {
+		$todo = mysqli_fetch_assoc($result);
+			$id 			= $todo['id'];
+			$name			= $todo['name'];
+			$description 	= $todo['description'];
+			$category 		= $todo['category'];
+			
+	}
+	else {
+		$name = "No task found";
+		$id = "0";
+		$description = "An error occurred or this task no longer exists. If you believe this is an error please Tweet at us (@ChooseClever)";
+		$category = "Error";
+	}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -7,7 +29,7 @@ include "../app/auth.php";
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	 
-	<title>Add a task</title>
+	<title>View or Update a task | Goalie</title>
 	<meta name="description" content="Much more than just a todo list dressed up in an understated, unassuming package." />
 	<meta name="author" content="Bill Patrianakos" />
 	<link rel="author" href="../humans.txt" />
@@ -34,6 +56,10 @@ include "../app/auth.php";
 				<h1 class="centered-text">
 					<a class="bar-button left" href="../do_it/">Back</a>
 					<i class="icon-check icon-large"></i> Goalie
+					<ul class="tabs right">  
+					    <li class="active"><a href="#"><i class="icon-eye-open icon-large"></i> View</a></li>
+					    <li><a href="#"><i class="icon-repeat icon-large"></i>Update</a></li>
+					</ul>
 				</h1>				
 			</nav>
 		</section>
@@ -43,21 +69,31 @@ include "../app/auth.php";
 			<article class="twelve">
 				<div id="signup" class="centered-text tabs_content">
 					<div>
-					<h2>Add a task</h2>
+					<h2><?php echo "$name"; ?></h2>
+					<p>
+						<?php echo "$description"; ?>
+						<br />
+						<strong>Category:</strong> <?php echo "$category"; ?>
+					</p>
+					</div>
+					<div>
+					<h2>Update task</h2>
 					<fieldset>
-						<form method="post" action="../app/new.php">
-							<input type="text" name="name" value="" placeholder="Short name" />
+						<form method="post" action="../app/update.php">
+							<input type="text" name="name" value="<?php echo "$name"; ?>" />
 							<br />
-							<textarea value="" name="description" placeholder="Task description"></textarea>
+							<textarea value="" name="description"><?php echo "$description"; ?></textarea>
 							<br />
 							<select name="category">
+								<option value="<?php echo "$category"; ?>"><?php echo "$category"; ?></option>
 								<option value="inbox">Inbox</option>
 								<option value="today">Today</option>
 								<option value="next">Next</option>
 								<option value="someday">Someday</option>
 							</select>
 							<br />
-							<input type="submit" value="Add task" />
+							<input type="hidden" name="taskid" value="<?php echo "$id"; ?>" />
+							<input type="submit" value="Update task" />
 						</form>
 					</fieldset>
 					</div>

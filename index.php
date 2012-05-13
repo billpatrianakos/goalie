@@ -34,17 +34,13 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 <div id="wrapper">
 	<header class="container">
 		<section class="row gradient" id="header">
-			<nav class="three">
-
-			</nav>
-			<article class="six centered-text">
-				<h1><i class="icon-check icon-large"></i> Goalie</h1>
-			</article>
-			<nav class="three last">
-				<ul class="tabs right">  
-				    <li class="active"><a href="#">Sign up</a></li>
-				    <li><a href="#">Log in</a></li>
-				</ul>
+			<nav class="twelve">
+				<h1 class="centered-text"><i class="icon-check icon-large"></i> Goalie
+					<ul class="tabs right">  
+					    <li class="active"><a href="#">Sign up</a></li>
+					    <li><a href="#">Log in</a></li>
+					</ul>
+				</h1>
 			</nav>
 		</section>
 	</header>

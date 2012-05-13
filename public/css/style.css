@@ -1269,9 +1269,18 @@ header {
   text-shadow: 0 -1px 1px #508ad2;
   font-family: Pacifico;
   font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bar-button {
-  margin-top: 10px;
+  display: block;
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 3px 12px !important;
 }
 #signup {
   max-width: 400px;
@@ -1367,6 +1376,9 @@ a.complete:visited {
   text-shadow: 0 -1px 1px #555555;
 }
 /*:::: SPECIAL STYLES ::::*/
+nav ul {
+  margin: 0;
+}
 nav li.active {
   display: none;
 }
@@ -1415,11 +1427,19 @@ nav a:visited {
   -moz-box-shadow: inset 0 1px 0 #75acea;
   -webkit-box-shadow: inset 0 1px 0 #75acea;
   box-shadow: inset 0 1px 0 #75acea;
-  padding: 6px 12px;
+  padding: 3px 12px;
+  display: block;
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-right: 5px;
 }
 nav li a:hover,
 nav a:hover {
   color: #f1f3f5;
+}
+.copyright {
+  padding-left: 10px;
 }
 /*:::: HELPER CLASSES ::::*/
 /*
