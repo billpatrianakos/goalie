@@ -14,6 +14,9 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 			$name			= $todo['name'];
 			$description 	= $todo['description'];
 			$category 		= $todo['category'];
+
+			# Capitalize first letter of category for display
+			$display_category = ucfirst($category);
 			
 	}
 	else {
@@ -88,7 +91,7 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 							<textarea value="" name="description"><?php echo "$description"; ?></textarea>
 							<br />
 							<select name="category">
-								<option value="<?php echo "$category"; ?>"><?php echo "$category"; ?></option>
+								<option value="<?php echo "$category"; ?>"><?php echo "$display_category"; ?></option>
 								<option value="inbox">Inbox</option>
 								<option value="today">Today</option>
 								<option value="next">Next</option>
