@@ -34,7 +34,7 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 </head>
 
 <body>
-<div id="wrapper">
+<div id="wrap">
 	<header class="container">
 		<section class="row gradient" id="header">
 			<nav class="twelve">
@@ -47,7 +47,7 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 			</nav>
 		</section>
 	</header>
-	<section id="main-container" class="container">
+	<section id="main" class="container">
 		<section class="row">
 			<article class="twelve">
 				<div class="clear"></div>
@@ -80,6 +80,7 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 			</article>
 		</section>
 	</section>
+</div>
 	<footer class="container">
 		<section class="row">
 			<article class="twelve">
@@ -95,7 +96,6 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 			</article>
 		</section>
 	</footer>
-</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
 	<script>window.jQuery || document.write('<script src="public/js/libs/jquery1.6.4.min.js">\x3C/script>')</script>

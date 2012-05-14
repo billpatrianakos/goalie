@@ -231,14 +231,28 @@ footer .row {
 #cat-sidebar {
 	background: @optionswhite;
 	border-right: 1px solid @activeblue;
-	min-height: 130px;
-	max-height: 2000px;
+	margin-right: 0;
+	display: block;
+	min-height: 100%;
+	overflow: auto;
+}
+
+#list-content {
+	background: @white;
+}
+
+#list-content h2 {
+	padding-left: 10px;
 }
 
 #categories {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	//height: 100%;
+	background: @optionswhite;
+	display: block;
+	overflow: auto;
 }
 
 #categories li {
@@ -270,13 +284,13 @@ ul li.catlist {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	height: 100%;
+	//height: 100%;
 }
 
 .list li {
 	border-top: 1px solid @optionswhite;
 	border-bottom: 1px solid @optionswhite;
-	padding: 5px 0px 5px 0px;
+	padding: 5px 0px 5px 10px;
 }
 
 .list li:hover {
@@ -342,6 +356,23 @@ nav li a:hover, nav a:hover {
 .copyright {
 	padding-left: 10px;
 }
+
+/* STICKY FOOTER */
+
+html, body {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 150px; /* must be same height as the footer */
+	background: @white;
+}
+
+footer {position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;} 
+
 
 /*:::: HELPER CLASSES ::::*/
 
