@@ -21,6 +21,9 @@ include "../app/fetch_lists.php";
 	<link rel="stylesheet" href="../public/css/style.css?v=2" />
 	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' type='text/css'>
 	<script src="../public/js/libs/respond.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+	</script>
 	
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if gte IE 9]><style type="text/css">.gradient { filter: none; }</style><![endif]-->
@@ -34,7 +37,7 @@ include "../app/fetch_lists.php";
 			<nav class="twelve">
 
 				<h1 class="centered-text">
-					<a class="bar-button left" href="../app/logout.php"><i class="icon-signout icon-large"></i> Log out</a>
+					<a class="bar-button left" href="../app/logout.php" target=""><i class="icon-signout icon-large"></i> Log out</a>
 					<i class="icon-check icon-large"></i> Goalie
 					<a class="bar-button right" href="../new"><i class="icon-plus icon-large"></i> New Task</a>
 				</h1>

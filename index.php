@@ -24,6 +24,9 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 	<link rel="stylesheet" href="public/css/style.css?v=2" />
 	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' type='text/css'>
 	<script src="public/js/libs/respond.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(chref=d.href).replace(e.href,"").indexOf("#")&&(!/^[a-z\+\.\-]+:/i.test(chref)||chref.indexOf(e.protocol+"//"+e.host)===0)&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone");
+	</script>
 	
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--[if gte IE 9]><style type="text/css">.gradient { filter: none; }</style><![endif]-->
@@ -81,8 +84,12 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 		<section class="row">
 			<article class="twelve">
 				<p class="copyright">
+					<a href="http://facebook.com/cleverwebdesign"><i class="icon-facebook-sign icon-large"></i></a> 
+					<a href="http://twitter.com/chooseclever"><i class="icon-twitter-sign icon-large"></i></a> 
+					<a href="http://github.com/billpatrianakos"><i class="icon-github-sign icon-large"></i></a>
+					<br />
 					<small>
-						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a> | Check out <a href="http://chooseclever.com">my company</a> too.
+						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a>
 					</small>
 				</p>
 			</article>
