@@ -1,3 +1,4 @@
-/*
- * Put all your JavaScript scripts here. Plugins go elsewhere.
- */
+// TOOLTIPS
+$(document).ready(function(){
+	$(".tip").jTip();
+}); 

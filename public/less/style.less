@@ -232,13 +232,12 @@ footer .row {
 	background: @optionswhite;
 	border-right: 1px solid @activeblue;
 	margin-right: 0;
-	display: block;
-	min-height: 100%;
-	overflow: auto;
+	min-height: 300px;
 }
 
 #list-content {
 	background: @white;
+	min-height: 300px;
 }
 
 #list-content h2 {
@@ -311,9 +310,17 @@ a.complete, a.complete:visited {
 	.text-shadow(0, -1px, 1px, @inactiveblack);
 }
 
+/*:::: ABOUT PAGE ::::*/
 
+#about-goalie p {
+	padding: 10px;
+}
 
-
+#sidebar {
+	background: @optionswhite;
+	height: 1420px;
+	padding-top: 10px;
+}
 
 
 
@@ -357,21 +364,44 @@ nav li a:hover, nav a:hover {
 	padding-left: 10px;
 }
 
-/* STICKY FOOTER */
-
-html, body {height: 100%;}
-
-#wrap {min-height: 100%;}
-
-#main {overflow:auto;
-	padding-bottom: 150px; /* must be same height as the footer */
-	background: @white;
+.tip_window {
+	background: @blue;
+	.border-radius(3px);
+	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
+	border: 1px solid @dblue;
+	.text-shadow(0, 1px, 1px, @dblue);
+	padding: 5px;
+	color: @white;
+	/* Arrow styles */
+	position: relative;
+	border: 1px solid @dblue;
 }
 
-footer {position: relative;
-	margin-top: -150px; /* negative value of footer height */
-	height: 150px;
-	clear:both;} 
+.tip_window:after, .tip_window:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tip_window:after {
+	border-top-color: @dblue;
+	border-width: 5px;
+	left: 50%;
+	margin-left: -5px;
+}
+.tip_window:before {
+	border-top-color: @dblue;
+	border-width: 6px;
+	left: 50%;
+	margin-left: -6px;
+}
+
+/* STICKY FOOTER */
+
 
 
 /*:::: HELPER CLASSES ::::*/
@@ -451,6 +481,18 @@ footer {position: relative;
 		& h1 {
 			font-size: 16px;
 		}
+	}
+
+	#cat-sidebar {
+		min-height: 1px;
+	}
+
+	#list-content {
+		min-height: 1px;
+	}
+
+	#sidebar {
+		height: auto;
 	}
 
 }

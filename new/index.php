@@ -76,6 +76,7 @@ include "../app/auth.php";
 					<a href="http://facebook.com/cleverwebdesign"><i class="icon-facebook-sign icon-large"></i></a> 
 					<a href="http://twitter.com/chooseclever"><i class="icon-twitter-sign icon-large"></i></a> 
 					<a href="http://github.com/billpatrianakos"><i class="icon-github-sign icon-large"></i></a>
+					<a class="tip" title="About Goalie" href="../about"><i class="icon-info-sign icon-large"></i></a>
 					<br />
 					<small>
 						Goalie is copyright &copy; 2012 <a href="http://billpatrianakos.me">Bill Patrianakos</a>
