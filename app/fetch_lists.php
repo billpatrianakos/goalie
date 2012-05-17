@@ -16,8 +16,17 @@ function fetch_list($which_list) {
 			$id 			= $todo['id'];
 			$name			= $todo['name'];
 			$description 	= $todo['description'];
+			$due 			= $todo['due'];
+			$duetime 		= $todo['time'];
 
 			$formid 		= str_replace(" ", "", $name);
+
+			if ($duetime == "") {
+				$time = "";
+			}
+			else {
+				$time = "@" . $duetime;
+			}
 
 			echo "
 			<li>
@@ -25,6 +34,7 @@ function fetch_list($which_list) {
 					<input type='checkbox' name='task' value='$id' /> 
 					<a href='../task/index.php?task=$id'>$name <span class='right'><i class='icon-chevron-right icon-large'></i></span></a>
 				</form>
+				&nbsp;&nbsp;&nbsp;&nbsp; <small>$due $time</small>
 			</li>
 			";
 		}

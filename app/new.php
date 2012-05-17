@@ -5,8 +5,18 @@ include "../config/database.php";
 $name 			= $_POST['name'];
 $description 	= $_POST['description'];
 $category 		= $_POST['category'];
+$due 			= $_POST['duedate'];
 
-$query = "INSERT INTO todos (userid, name, description, category) VALUES('$uid', '$name', '$description', '$category')";
+if ($_POST['minute'] == "") {
+	$minute = "";
+}
+else {
+	$minute = ":" . $_POST['minute'];
+}
+
+$duetime 		= $_POST['hour'] . $minute . $_POST['ampm'];
+
+$query = "INSERT INTO todos (userid, name, description, category, due, time) VALUES('$uid', '$name', '$description', '$category', '$due', '$duetime')";
 $result = mysqli_query($connect, $query) or die ("Query failed");
 $count = mysqli_num_rows($result);
 
