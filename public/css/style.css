@@ -1109,7 +1109,8 @@ textarea {
   box-shadow: inset 0 1px 0 #75acea;
   border: 1px solid #3a7ac1;
   padding: 5px;
-  margin: auto auto 5px auto;
+  margin: auto auto 10px auto;
+  width: 200px;
 }
 input[type=text],
 input[type=email],
@@ -1124,7 +1125,8 @@ input[type=password] {
   box-shadow: inset 0 1px 0 #75acea;
   border: 1px solid #3a7ac1;
   padding: 5px;
-  margin: auto auto 5px auto;
+  margin: auto auto 10px auto;
+  width: 200px;
 }
 input[type=submit] {
   background: #5f9fe6;
@@ -1202,6 +1204,18 @@ input[type=submit]:active {
 }
 select {
   margin-bottom: 10px;
+  border: 1px solid #3a7ac1;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  padding: 5px;
+  background: #ffffff;
+  color: #555555;
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+}
+select[name=category] {
+  width: 205px;
 }
 /**************************************\
 |* THE REST OF YOUR STYLES BELOW HERE *|
@@ -1281,6 +1295,7 @@ header {
   margin-left: 5px;
   margin-right: 5px;
   padding: 3px 12px !important;
+  border-bottom: 1px solid #508ad2 !important;
 }
 #signup {
   max-width: 400px;

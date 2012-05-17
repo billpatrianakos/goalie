@@ -113,7 +113,8 @@ include "../app/fetch_lists.php";
 	<script type="text/javascript">
 		/* jTABS */
 		$(document).ready(function(){
-			$("ul.tabs").jTabs({content: ".tabs_content"});
+			$("ul.tabs").jTabs({content: ".tabs_content", equal_height: true,
+			cookies: true});
 		});
 	</script>
 

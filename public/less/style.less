@@ -137,7 +137,8 @@ textarea {
 	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
 	border: 1px solid @blue;
 	padding: 5px;
-	margin: auto auto 5px auto;
+	margin: auto auto 10px auto;
+	width: 200px;
 }
 
 input[type=text], input[type=email], input[type=password] {
@@ -145,7 +146,8 @@ input[type=text], input[type=email], input[type=password] {
 	.inset-shadow(inset, 0, 1px, 0, @fadedblue);
 	border: 1px solid @blue;
 	padding: 5px;
-	margin: auto auto 5px auto;
+	margin: auto auto 10px auto;
+	width: 200px;
 }
 
 input[type=submit] {
@@ -165,6 +167,16 @@ input[type=submit]:active {
 
 select {
 	margin-bottom: 10px;
+	border: 1px solid @blue;
+	.border-radius(6px);
+	padding: 5px;
+	background: @white;
+	color: @inactiveblack;
+	font-family: Arimo, Helvetica, Arial, sans-serif;
+}
+
+select[name=category] {
+	width: 205px;
 }
 
 
@@ -209,6 +221,7 @@ header {
 	margin-left: 5px;
 	margin-right: 5px;
 	padding: 3px 12px !important;
+	border-bottom: 1px solid @dblue !important;
 }
 
 #signup {
