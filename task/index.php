@@ -11,7 +11,7 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 	if ($count == 1) {
 		$todo = mysqli_fetch_assoc($result);
 			$id 			= $todo['id'];
-			$name			= $todo['name'];
+			$name			= htmlentities($todo['name']);
 			$description 	= $todo['description'];
 			$category 		= $todo['category'];
 

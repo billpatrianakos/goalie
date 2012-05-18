@@ -2,8 +2,8 @@
 
 include('../config/database.php');
 
-$username = $_POST['user'];
-$password = $_POST['password'];
+$username = mysql_real_escape_string($_POST['user']);
+$password = mysql_real_escape_string($_POST['password']);
 
 // Check for taken username
 $query = "SELECT user FROM user WHERE user='$username'";
