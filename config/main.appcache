@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Version 1
+# Version 2
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -10,7 +10,7 @@ index.php
 /apple-touch-startup-image-768x1004.png
 /apple-touch-startup-image-748x1024.png
 /public/css/style.css
-http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' type='text/css
+http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico
 /public/js/libs/jquery1.6.4.min.js
 /public/js/libs/jquery-ui-1.8.20.custom.min.js
 /public/js/plugins.js
@@ -20,3 +20,7 @@ http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' 
 NETWORK:
 
 FALLBACK:
+
+# CHANGE LOG
+# - Fixed web font link
+# - Changed to version 2 to update cache after new changes

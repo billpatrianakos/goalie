@@ -56,6 +56,7 @@ include "../app/fetch_lists.php";
 				    <li><a href="#"><i class="icon-arrow-right icon-large"></i> Next</a></li>
 				    <li><a href="#"><i class="icon-calendar icon-large"></i> Someday</a></li>
 				</ul>
+				<a href="#" class="mobile-cat-list" rel="#categories">Expand</a>
 			</article>
 			<article id="list-content" class="nine last">
 				<div class="tabs_content">
@@ -115,6 +116,12 @@ include "../app/fetch_lists.php";
 		$(document).ready(function(){
 			$("ul.tabs").jTabs({content: ".tabs_content", equal_height: true,
 			cookies: true});
+		});
+		/* jCollapse (To collapse mobile category list) */
+		// Mobile categories collapse
+		$(document).ready(function(){
+		    $(".mobile-cat-list").jCollapse({effect: "slide", expand_text: "Show Lists",
+            collapse_text: "Hide Lists"});                       
 		});
 		
 		/* ANALYTICS BELOW */

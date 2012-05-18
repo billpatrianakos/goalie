@@ -1576,6 +1576,10 @@ nav a:hover {
   padding-left: 5px;
   padding-right: 5px;
 }
+/*:::: HIDE 'Display Category' LINK/BUTTON FOR NON-MOBILE BROWSERS ::::*/
+.mobile-cat-list {
+  display: none;
+}
 /*:::: HELPER CLASSES ::::*/
 /*
  * Define your styles first. Add media queries below here.
@@ -1699,6 +1703,24 @@ nav a:hover {
   }
   #sidebar {
     height: auto;
+  }
+  #categories {
+    display: none;
+  }
+  .mobile-cat-list,
+  .mobile-cat-list:visited {
+    display: block;
+    text-align: center;
+    color: #555555;
+    font-family: Arimo, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    -o-text-shadow: 0 1px 1px #ffffff;
+    -moz-text-shadow: 0 1px 1px #ffffff;
+    -webkit-text-shadow: 0 1px 1px #ffffff;
+    text-shadow: 0 1px 1px #ffffff;
+  }
+  .mobile-cat-list:hover {
+    color: #333333;
   }
 }
 /* Extra queries just in case... */

@@ -135,3 +135,62 @@
 		});
     };
 })(jQuery);
+
+// jCOLLAPSE
+(function($){
+    $.fn.jCollapse = function(options) {
+        var defaults = {
+            expand_text: "Expand",
+            collapse_text: "Collapse",
+			effect: "display"
+        };
+        var options = $.extend(defaults, options);
+
+        return this.each(function() {
+            // object is the selected pagination element list
+            var obj = $(this);
+            // the expand text
+            var expand_text = options.expand_text;
+			// set the current element with the expand text no matter what
+			obj.html(expand_text);
+			// the collapse text
+            var collapse_text = options.expand_text;
+			// get the element we are collapsing 
+			var obj_c = $(obj.attr("rel"));
+			obj.click(function(e){
+				e.preventDefault();
+				if (obj.html() == expand_text) {
+					obj.html(options.collapse_text);
+					switch(options.effect) {
+						case "display":
+							obj_c.show();
+							break;
+						case "fade":
+							obj_c.fadeIn("slow");
+							break;
+						case "slide":
+							obj_c.slideDown("slow");
+							break;
+						default:
+							obj_c.show();
+					}
+				} else {
+					obj.html(options.expand_text);
+					switch(options.effect) {
+						case "display":
+							obj_c.hide();
+							break;
+						case "fade":
+							obj_c.fadeOut("slow");
+							break;
+						case "slide":
+							obj_c.slideUp("slow");
+							break;
+						default:
+							obj_c.hide();
+					}
+				}	
+			});
+		});
+    };
+})(jQuery);
