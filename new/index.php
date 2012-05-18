@@ -2,7 +2,7 @@
 include "../app/auth.php";
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" manifest="../config/main.appcache">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -63,7 +63,7 @@ include "../app/auth.php";
 								<option value="someday">Someday</option>
 							</select>
 							<br />
-							<input type="text" id="datepicker" value="" name="duedate" placeholder="Due date" />
+							<input type="text" id="datepicker" value="" name="duedate" placeholder="Due date" readonly="true" />
 							<br />
 							<select name="hour">
 								<option value="">Hour</option>

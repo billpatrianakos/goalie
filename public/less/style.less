@@ -305,10 +305,12 @@ ul li.catlist {
 	border-top: 1px solid @optionswhite;
 	border-bottom: 1px solid @optionswhite;
 	padding: 5px 0px 5px 10px;
+	color: @inactiveblack;
 }
 
 .list li:hover {
 	background: @activeblue;
+	color: @activeblack;
 }
 
 .list a, .list a:visited {
@@ -415,9 +417,57 @@ nav li a:hover, nav a:hover {
 	margin-left: -6px;
 }
 
-/* STICKY FOOTER */
+.view-arrow {
+	float: right;
+	display: block;
+	font-size: 16px;
+	vertical-align: bottom;
+}
 
+/* DATE PICKER */
 
+.ui-datepicker {
+	background: @optionswhite;
+	border: 1px solid @fadedblue;
+	padding: 10px;
+	.border-radius(3px);
+}
+
+.ui-datepicker-header {
+	background: @blue;
+	padding: 5px;
+	.border-top-radius(3px);
+}
+
+.ui-datepicker-prev {
+	float: left;
+	font-size: 10px;
+	color: @white;
+	cursor: pointer;
+}
+
+.ui-datepicker-next {
+	float: right;
+	font-size: 10px;
+	color: @white;
+	cursor: pointer;
+}
+
+.ui-datepicker-next:hover, .ui-datepicker-prev:hover {
+	color: @optionswhite;
+	cursor: pointer;
+}
+
+.ui-datepicker-title {
+	text-align: center;
+	font-weight: bold;
+	color: @white;
+}
+
+.ui-datepicker-calendar td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
 
 /*:::: HELPER CLASSES ::::*/
 

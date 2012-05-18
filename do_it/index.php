@@ -3,7 +3,7 @@ require_once "../app/auth.php";
 include "../app/fetch_lists.php";
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" manifest="../config/main.appcache">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -116,9 +116,8 @@ include "../app/fetch_lists.php";
 			$("ul.tabs").jTabs({content: ".tabs_content", equal_height: true,
 			cookies: true});
 		});
-	</script>
-
-	<script type="text/javascript">
+		
+		/* ANALYTICS BELOW */
 		var pkBaseURL = (("https:" == document.location.protocol) ? "https://chooseclever.com/stats/" : "http://chooseclever.com/stats/");
 		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
 		</script><script type="text/javascript">

@@ -25,14 +25,14 @@ function fetch_list($which_list) {
 				$time = "";
 			}
 			else {
-				$time = "@" . $duetime;
+				$time = "@" . " " . $duetime;
 			}
 
 			echo "
 			<li>
 				<form method='post' name='$formid' action='../app/complete.php' onclick=\"document.forms['$formid'].submit()\">
 					<input type='checkbox' name='task' value='$id' /> 
-					<a href='../task/index.php?task=$id'>$name <span class='right'><i class='icon-chevron-right icon-large'></i></span></a>
+					<a href='../task/index.php?task=$id'>$name <span class='view-arrow'><i class='icon-chevron-right icon-large'></i></span></a>
 				</form>
 				&nbsp;&nbsp;&nbsp;&nbsp; <small>$due $time</small>
 			</li>

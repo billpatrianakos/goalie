@@ -14,7 +14,12 @@ else {
 	$minute = ":" . $_POST['minute'];
 }
 
-$duetime 		= $_POST['hour'] . $minute . $_POST['ampm'];
+if ($_POST['hour'] == "" && $_POST['minute'] != "") {
+	$duetime = "";
+}
+else {
+	$duetime = $_POST['hour'] . $minute . $_POST['ampm'];
+}
 
 $query = "INSERT INTO todos (userid, name, description, category, due, time) VALUES('$uid', '$name', '$description', '$category', '$due', '$duetime')";
 $result = mysqli_query($connect, $query) or die ("Query failed");

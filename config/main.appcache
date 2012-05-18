@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# Version 1
+
+# Explicitly cached 'master entries'.
+CACHE:
+/favicon.ico
+index.php
+/apple-touch-startup-image-320x460.png
+/apple-touch-startup-image-640x920.png
+/apple-touch-startup-image-768x1004.png
+/apple-touch-startup-image-748x1024.png
+/public/css/style.css
+http://fonts.googleapis.com/css?family=Arimo:400,700|Pacifico' rel='stylesheet' type='text/css
+/public/js/libs/jquery1.6.4.min.js
+/public/js/libs/jquery-ui-1.8.20.custom.min.js
+/public/js/plugins.js
+/public/js/scripts.js
+
+# Resources that require the user to be online.
+NETWORK:
+
+FALLBACK:
