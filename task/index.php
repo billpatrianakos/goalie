@@ -101,6 +101,44 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 								<option value="someday">Someday</option>
 							</select>
 							<br />
+							<input type="text" id="datepicker" value="" name="duedate" placeholder="Due date" readonly="true" />
+							<br />
+							<select name="hour">
+								<option value="">Hour</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select> 
+							<select name="minute">
+								<option value="">Minute</option>
+								<option value="00">:00</option>
+								<option value="05">:05</option>
+								<option value="10">:10</option>
+								<option value="15">:15</option>
+								<option value="20">:20</option>
+								<option value="25">:25</option>
+								<option value="30">:30</option>
+								<option value="35">:35</option>
+								<option value="40">:40</option>
+								<option value="45">:45</option>
+								<option value="50">:50</option>
+								<option value="55">:55</option>
+							</select> 
+							<select name="ampm">
+								<option value="">am/pm</option>
+								<option value="am">am</option>
+								<option value="pm">pm</option>
+							</select>
+							<br />
 							<input type="hidden" name="taskid" value="<?php echo "$id"; ?>" />
 							<input type="submit" value="Update task" />
 						</form>
@@ -129,12 +167,17 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 	</footer>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 	<script>window.jQuery || document.write('<script src="../public/js/libs/jquery1.6.4.min.js">\x3C/script>')</script>
+	<script>window.jQuery || document.write('<script src="../public/js/libs/jquery-ui-1.8.20.custom.min.js">\x3C/script>')</script>
 	<script src="../public/js/plugins.js"></script>
 	<script src="../public/js/scripts.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("ul.tabs").jTabs({content: ".tabs_content"});
+		});
+		$(function() {
+			$( "#datepicker" ).datepicker({ dateFormat: "D. MM d" });
 		});
 	</script>
 
