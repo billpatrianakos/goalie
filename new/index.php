@@ -38,7 +38,7 @@ include "../app/auth.php";
 		<section class="row gradient" id="header">
 			<nav class="twelve">
 				<h1 class="centered-text">
-					<a class="bar-button left" href="../do_it/">Back</a>
+					<a class="bar-button left back-btn" href="../do_it/">Back</a>
 					<i class="icon-check icon-large"></i> Goalie
 				</h1>				
 			</nav>

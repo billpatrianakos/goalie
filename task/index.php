@@ -27,7 +27,7 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 	}
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" manifest="../config/main.appcache">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -63,7 +63,7 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 		<section class="row gradient" id="header">
 			<nav class="twelve">
 				<h1 class="centered-text">
-					<a class="bar-button left" href="../do_it/">Back</a>
+					<a class="bar-button left back-btn" href="../do_it/">Back</a>
 					<i class="icon-check icon-large"></i> Goalie
 					<ul class="tabs right">  
 					    <li class="active"><a href="#"><i class="icon-eye-open icon-large"></i> View</a></li>
