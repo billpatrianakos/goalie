@@ -7,6 +7,11 @@ $description 	= $_POST['description'];
 $category 		= $_POST['category'];
 $due 			= $_POST['duedate'];
 
+// Escape the data where necessary
+$name 			= mysql_real_escape_string($name);
+$description 	= mysql_real_escape_string($description);
+
+
 if ($_POST['minute'] == "") {
 	$minute = "";
 }

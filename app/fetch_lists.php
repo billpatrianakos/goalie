@@ -19,7 +19,7 @@ function fetch_list($which_list) {
 			$due 			= $todo['due'];
 			$duetime 		= $todo['time'];
 
-			$formid 		= str_replace(" ", "", $name);
+			$formid 		= "a" . str_replace(array(" ", "'", '"'), "", $name);
 
 			if ($duetime == "") {
 				$time = "";
@@ -33,8 +33,9 @@ function fetch_list($which_list) {
 				<form method='post' name='$formid' action='../app/complete.php' onclick=\"document.forms['$formid'].submit()\">
 					<input type='checkbox' name='task' value='$id' /> 
 					<a href='../task/index.php?task=$id'>$name <span class='view-arrow'><i class='icon-chevron-right icon-large'></i></span></a>
+					<br />
+					&nbsp;&nbsp;&nbsp;&nbsp; <small>$due $time</small>
 				</form>
-				&nbsp;&nbsp;&nbsp;&nbsp; <small>$due $time</small>
 			</li>
 			";
 		}
