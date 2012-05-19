@@ -3,22 +3,22 @@ include "auth.php";
 include "../config/database.php";
 
 $name 			= $_POST['name'];
-$description 	= mysql_real_escape_string($_POST['description']);
-$category 		= mysql_real_escape_string($_POST['category']);
-$due 			= mysql_real_escape_string($_POST['duedate']);
+$description 	= $_POST['description']);
+$category 		= $_POST['category']);
+$due 			= $_POST['duedate'];
 
 if ($_POST['minute'] == "") {
 	$minute = "";
 }
 else {
-	$minute = ":" . mysql_real_escape_string($_POST['minute']);
+	$minute = ":" . $_POST['minute'];
 }
 
 if ($_POST['hour'] == "" && $_POST['minute'] != "") {
 	$duetime = "";
 }
 else {
-	$duetime = mysql_real_escape_string($_POST['hour']) . $minute . mysql_real_escape_string($_POST['ampm']);
+	$duetime = $_POST['hour'] . $minute . $_POST['ampm'];
 }
 
 $query = "INSERT INTO todos (userid, name, description, category, due, time) VALUES('$uid', '$name', '$description', '$category', '$due', '$duetime')";
