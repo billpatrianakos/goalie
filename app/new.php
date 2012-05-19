@@ -3,8 +3,8 @@ include "auth.php";
 include "../config/database.php";
 
 $name 			= $_POST['name'];
-$description 	= $_POST['description']);
-$category 		= $_POST['category']);
+$description 	= $_POST['description'];
+$category 		= $_POST['category'];
 $due 			= $_POST['duedate'];
 
 if ($_POST['minute'] == "") {
