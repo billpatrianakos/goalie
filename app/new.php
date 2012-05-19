@@ -8,8 +8,8 @@ $category 		= $_POST['category'];
 $due 			= $_POST['duedate'];
 
 // Escape the data where necessary
-$name 			= mysql_real_escape_string($name);
-$description 	= mysql_real_escape_string($description);
+$name 			= addslashes($name);
+$description 	= addslashes($description);
 
 
 if ($_POST['minute'] == "") {
