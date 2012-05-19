@@ -424,6 +424,17 @@ nav li a:hover, nav a:hover {
 	vertical-align: bottom;
 }
 
+/* ERROR Message (signup/login page) */
+
+.show-error {
+	color: @inactiveblack;
+	background: @yellow;
+	padding: 5px;
+	font-size: 12px;
+	border-top: 1px solid @ltblue;
+	border-bottom: 1px solid @ltblue;
+}
+
 /* DATE PICKER */
 
 .ui-datepicker {
@@ -550,8 +561,17 @@ nav li a:hover, nav a:hover {
 	#header {
 		.border-radius(0px);
 		& h1 {
-			font-size: 16px;
+			font-size: 14px;
+			line-height: 22px;
 		}
+	}
+
+	a.bar-button {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding: 8px 10px !important;
+		font-size: 10px;
+		line-height: 16px;
 	}
 
 	#cat-sidebar {
@@ -575,8 +595,10 @@ nav li a:hover, nav a:hover {
 		text-align: center;
 		color: @inactiveblack;
 		font-family: Arimo, Helvetica, Arial, sans-serif;
+		font-size: 12px;
 		font-weight: 700;
 		.text-shadow(0, 1px, 1px, @white);
+		padding: 5px;
 	}
 
 	.mobile-cat-list:hover {

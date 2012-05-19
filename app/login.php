@@ -4,6 +4,10 @@ include "../config/database.php";
 $username = $_POST['user'];
 $password = $_POST['password'];
 
+# Remove bad characters from login text
+$username = str_replace(array(" ", "'", '"', ";", "<", ">", "\\"), "", $username);
+$password = str_replace(array(" ", "'", '"', ";", "<", ">", "\\"), "", $password);
+
 $query = "SELECT * FROM user WHERE user='$username' AND password='$password'";
 $result = mysqli_query($connect, $query) or die ("Failed to sign you in");
 $count = mysqli_num_rows($result);
@@ -22,6 +26,6 @@ if ($count == 1) {
 	header("Location: ../do_it/index.php");
 }
 else {
-	echo "Could not sign you in";
+	header("Location: ../index.php?err=fail");
 }
 ?>

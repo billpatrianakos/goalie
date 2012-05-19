@@ -8,10 +8,14 @@ include "auth.php";
 include "../config/database.php";
 
 $task 			= $_POST['taskid'];
-$name 			= mysql_real_escape_string($_POST['name']);
-$description 	= mysql_real_escape_string($_POST['description']);
-$category 		= mysql_real_escape_string($_POST['category']);
-$due 			= mysql_real_escape_string($_POST['duedate']);
+$name 			= $_POST['name'];
+$description 	= $_POST['description'];
+$category 		= $_POST['category'];
+$due 			= $_POST['duedate'];
+
+# Escape quotes (Find a way to make mysql_real_escape_string work in future)
+$name 			= addslashes($name);
+$description 	= addslashes($description);
 
 if ($_POST['minute'] == "") {
 	$minute = "";

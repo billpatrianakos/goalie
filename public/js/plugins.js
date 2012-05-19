@@ -3,8 +3,8 @@
     $.fn.jTabs = function(options) {
         var defaults = {
             content: "div.content",
-			equal_height: true,
-			cookies: true,
+			equal_height: false,
+			cookies: false,
 			animate: false,
 			effect: "fade",
 			speed: 400

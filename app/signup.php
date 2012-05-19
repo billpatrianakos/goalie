@@ -2,8 +2,12 @@
 
 include('../config/database.php');
 
-$username = mysql_real_escape_string($_POST['user']);
-$password = mysql_real_escape_string($_POST['password']);
+$username = $_POST['user'];
+$password = $_POST['password'];
+
+# Remove bad characters from usernames
+$username = str_replace(array(" ", "'", '"', ";", "<", ">", "\\"), "", $username);
+$password = str_replace(array(" ", "'", '"', ";", "<", ">", "\\"), "", $password);
 
 // Check for taken username
 $query = "SELECT user FROM user WHERE user='$username'";

@@ -4,6 +4,22 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 	header("Location: do_it/index.php");
 }
 
+# Logic to display "User already exists message"
+if (isset($_GET['err'])) {
+	$error = $_GET['err'];
+	if ($error == "exists") {
+		$signup_error = "show-error";
+		$login_error = "hidden";
+	}
+	elseif ($error == "fail") {
+		$signup_error = "hidden";
+		$login_error = "show-error";
+	}
+	else {
+		$signup_error = "hidden";
+		$login_error = "hidden";
+	}
+}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
@@ -57,6 +73,11 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 				<div id="signup" class="centered-text tabs_content">
 					<div>
 					<h2>Sign up</h2>
+					<p class="<?php echo "$signup_error"; ?>">
+						<strong><i class="icon-warning-sign icon-large"></i> Sorry, the username you chose is taken. Please choose another</strong>
+						<br />
+						<small>(Trying to log in? Press the button in the top right corner of this page)</small>
+					</p>
 					<fieldset>
 						<form method="post" action="app/signup.php">
 							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
@@ -69,6 +90,11 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 					</div>
 					<div>
 					<h2>Log in</h2>
+					<p class="<?php echo "$login_error"; ?>">
+						<strong><i class="icon-warning-sign icon-large"></i> Oops, the username or password you entered is incorrect</strong>
+						<br />
+						<small>(Trying to sign up? Press the button in the top right corner of this page)</small>
+					</p>
 					<fieldset>
 						<form method="post" action="app/login.php">
 							<i class="icon-user icon-large"></i> <input type="text" name="user" value="" placeholder="Username" />
@@ -107,7 +133,7 @@ if (isset($_COOKIE['goalie']) && $_COOKIE['goalie'] == 'set') {
 	<script src="public/js/scripts.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("ul.tabs").jTabs({content: ".tabs_content"});
+			$("ul.tabs").jTabs({content: ".tabs_content", cookies: true});
 		});
 	</script>
 

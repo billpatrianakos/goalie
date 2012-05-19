@@ -1528,6 +1528,15 @@ nav a:hover {
   font-size: 16px;
   vertical-align: bottom;
 }
+/* ERROR Message (signup/login page) */
+.show-error {
+  color: #555555;
+  background: #f2e700;
+  padding: 5px;
+  font-size: 12px;
+  border-top: 1px solid #5f9fe6;
+  border-bottom: 1px solid #5f9fe6;
+}
 /* DATE PICKER */
 .ui-datepicker {
   background: #f1f3f5;
@@ -1693,7 +1702,15 @@ nav a:hover {
     border-radius: 0px;
   }
   #header h1 {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  a.bar-button {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 8px 10px !important;
+    font-size: 10px;
+    line-height: 16px;
   }
   #cat-sidebar {
     min-height: 1px;
@@ -1713,11 +1730,13 @@ nav a:hover {
     text-align: center;
     color: #555555;
     font-family: Arimo, Helvetica, Arial, sans-serif;
+    font-size: 12px;
     font-weight: 700;
     -o-text-shadow: 0 1px 1px #ffffff;
     -moz-text-shadow: 0 1px 1px #ffffff;
     -webkit-text-shadow: 0 1px 1px #ffffff;
     text-shadow: 0 1px 1px #ffffff;
+    padding: 5px;
   }
   .mobile-cat-list:hover {
     color: #333333;
