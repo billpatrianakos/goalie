@@ -2,7 +2,7 @@
 include "auth.php";
 include "../config/database.php";
 
-$name 			= mysql_real_escape_string($_POST['name']);
+$name 			= $_POST['name'];
 $description 	= mysql_real_escape_string($_POST['description']);
 $category 		= mysql_real_escape_string($_POST['category']);
 $due 			= mysql_real_escape_string($_POST['duedate']);
