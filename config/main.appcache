@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Version 2
+# Version 3
 
 # Explicitly cached 'master entries'.
 CACHE:
@@ -24,3 +24,4 @@ FALLBACK:
 # CHANGE LOG
 # - Fixed web font link
 # - Changed to version 2 to update cache after new changes
+# For some reason app seems to not add tasks
