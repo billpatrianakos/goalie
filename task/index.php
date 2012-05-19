@@ -27,7 +27,7 @@ $query = "SELECT * FROM todos WHERE id='$task' AND userid='$uid'";
 	}
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en" manifest="../config/main.appcache">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />

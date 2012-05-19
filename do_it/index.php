@@ -3,7 +3,7 @@ require_once "../app/auth.php";
 include "../app/fetch_lists.php";
 ?>
 <!DOCTYPE html>
-<html class="no-js" lang="en" manifest="../config/main.appcache">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
