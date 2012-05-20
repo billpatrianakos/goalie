@@ -20,6 +20,10 @@ if (isset($_GET['err'])) {
 		$login_error = "hidden";
 	}
 }
+else {
+		$signup_error = "hidden";
+		$login_error = "hidden";
+	}
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="en" manifest="config/main.appcache">

@@ -1331,6 +1331,7 @@ footer .row {
   background: #ffffff;
   min-height: 300px;
   max-height: 1000px;
+  margin-right: 0%;
 }
 #list-content h2 {
   padding-left: 10px;
@@ -1371,14 +1372,16 @@ ul li.catlist {
 }
 .list {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0!important;
+  width: 100%;
 }
 .list li {
   border-top: 1px solid #f1f3f5;
   border-bottom: 1px solid #f1f3f5;
   padding: 5px 0px 5px 10px;
   color: #555555;
+  width: 100%;
 }
 .list li:hover {
   background: #e7edf3;
@@ -1402,6 +1405,9 @@ a.complete:visited {
   -moz-text-shadow: 0 -1px 1px #555555;
   -webkit-text-shadow: 0 -1px 1px #555555;
   text-shadow: 0 -1px 1px #555555;
+}
+.list_content {
+  width: 100%;
 }
 /*:::: ABOUT PAGE ::::*/
 #about-goalie p {

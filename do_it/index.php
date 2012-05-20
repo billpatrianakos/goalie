@@ -47,7 +47,7 @@ include "../app/fetch_lists.php";
 			</nav>
 		</section>
 	</header>
-	<section class="container">
+	<section id="main-container" class="container">
 		<section id="main" class="row">
 			<article id="cat-sidebar" class="three">
 				<ul id="categories" class="tabs">  
