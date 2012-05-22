@@ -2,6 +2,8 @@
 /**
  * List functions
  * Pulls list items from all categories into view
+ * AND
+ * Pulls all projects into list
  */
 
 function fetch_list($which_list) {
@@ -19,7 +21,9 @@ function fetch_list($which_list) {
 			$due 			= $todo['due'];
 			$duetime 		= $todo['time'];
 
-			$formid 		= "a" . str_replace(array(" ", "'", '"'), "", $name);
+			# Remove special characters from '$formid' and make sure it is an alpha-numeric string
+			# Special chars and ints interfere with the JS that submits the form on checking the checkbox
+			$formid 		= "a" . str_replace(array(" ", "'", '"', ".", "!", ","), "", $name);
 
 			if ($duetime == "") {
 				$time = "";
@@ -44,4 +48,17 @@ function fetch_list($which_list) {
 		echo "<li>Looks like there's nothing to do. Nice.</li>";
 	}
 }
+/*
+function fetch_project_list() {
+
+	# Fetches a list of all projects
+
+}
+
+function fetch_project_tasks() {
+	
+	# Gets the list of project todosto display on the do_it page
+
+}
+*/
 ?>

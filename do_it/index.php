@@ -50,11 +50,14 @@ include "../app/fetch_lists.php";
 	<section id="main-container" class="container">
 		<section id="main" class="row">
 			<article id="cat-sidebar" class="three">
-				<ul id="categories" class="tabs">  
+				<ul id="categories" class="tabs"> 
+					<li class="cat-header">Lists</li>
 				    <li class="active catlist"><a href="#"><i class="icon-inbox icon-large"></i> Inbox</a></li>
 				    <li><a href="#"><i class="icon-star icon-large"></i> Today</a></li>
 				    <li><a href="#"><i class="icon-arrow-right icon-large"></i> Next</a></li>
 				    <li><a href="#"><i class="icon-calendar icon-large"></i> Someday</a></li>
+				    <li class="cat-header">Projects</li>
+				    <!-- ?php fetch_project_list(); ? -->
 				</ul>
 				<a href="#" class="mobile-cat-list" rel="#categories">Expand</a>
 			</article>
@@ -85,6 +88,7 @@ include "../app/fetch_lists.php";
 				    		<?php fetch_list('someday'); ?>
 				    	</ul>
 				    </div>
+				    <!-- Add a function to add views for each available project here -->
 				</div>
 			</article>
 		</section>
