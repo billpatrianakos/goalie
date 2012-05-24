@@ -51,7 +51,7 @@ include "../app/fetch_lists.php";
 		<section id="main" class="row">
 			<article id="cat-sidebar" class="three">
 				<ul id="categories" class="tabs"> 
-					<li class="cat-header">Lists</li>
+					<!-- li class="cat-header">Lists</li -->
 				    <li class="active catlist"><a href="#"><i class="icon-inbox icon-large"></i> Inbox</a></li>
 				    <li><a href="#"><i class="icon-star icon-large"></i> Today</a></li>
 				    <li><a href="#"><i class="icon-arrow-right icon-large"></i> Next</a></li>
