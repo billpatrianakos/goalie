@@ -56,7 +56,7 @@ include "../app/fetch_lists.php";
 				    <li><a href="#"><i class="icon-star icon-large"></i> Today</a></li>
 				    <li><a href="#"><i class="icon-arrow-right icon-large"></i> Next</a></li>
 				    <li><a href="#"><i class="icon-calendar icon-large"></i> Someday</a></li>
-				    <li class="cat-header">Projects</li>
+				    <!-- li class="cat-header">Projects</li -->
 				    <!-- ?php fetch_project_list(); ? -->
 				</ul>
 				<a href="#" class="mobile-cat-list" rel="#categories">Expand</a>
